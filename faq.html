@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ - Projet MINERAL</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Spécifique à la FAQ */
+    .faq-item {
+      display: none; /* toutes les questions sont cachées au début */
+      margin-bottom: 1em;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1em;
+    }
+    .faq-question {
+      font-weight: bold;
+    }
+    .faq-answer {
+      margin-top: 0.5em;
+    }
+    #searchInput {
+      padding: 0.5em;
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 2em;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu principal -->
+  <header>
+    <div class="container">
+      <h1>Projet MINERAL</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projet.html">Projet</a></li>
+          <li><a href="partenaires.html">Partenaires</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sous-menu contact -->
+  <nav class="submenu">
+    <ul>
+      <li><a href="contact.html">Nous contacter</a></li>
+      <li><a href="rejoindre.html">Nous rejoindre</a></li>
+      <li><a href="charte-graphique.html">Charte graphique et logo</a></li>
+      <li><a href="flux-rss.html">Flux RSS & Réseaux sociaux</a></li>
+      <li><a href="faq.html" class="active">FAQ</a></li>
+      <li><a href="offres de poste.html">Offres de poste</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main class="container">
+    <h2>FAQ – Questions fréquentes</h2>
+    <input type="text" id="searchInput" placeholder="Rechercher une question..." onkeyup="searchFAQ()" />
+
+    <section id="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">🔹 Qu’est-ce que le projet MINERAL ?</div>
+        <div class="faq-answer">Le projet MINERAL étudie les conversations humaines en intégrant les dimensions sémantiques, discursives et non verbales.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">🔹 Comment puis-je postuler à une offre ?</div>
+        <div class="faq-answer">Vous pouvez consulter les <a href="offres de poste.html">offres disponibles</a> et envoyer votre candidature via le formulaire dédié.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">🔹 Où puis-je trouver les publications ?</div>
+        <div class="faq-answer">Les publications sont accessibles dans la section <a href="publications.html">Publications</a>.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">🔹 Quels sont les partenaires du projet ?</div>
+        <div class="faq-answer">Vous pouvez retrouver la liste complète des partenaires sur la page <a href="partenaires.html">Partenaires</a>.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Projet MINERAL</p>
+  </footer>
+
+  <script>
+    function searchFAQ() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.querySelectorAll(".faq-item");
+      items.forEach(item => {
+        const question = item.querySelector(".faq-question").textContent.toLowerCase();
+        const answer = item.querySelector(".faq-answer");
+        if (question.includes(input) && input.trim() !== "") {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

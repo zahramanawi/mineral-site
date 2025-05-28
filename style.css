@@ -1,0 +1,188 @@
+/* =============================
+   STYLE GÉNÉRAL (communs à TOUTES les pages)
+============================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ----- HEADER ET NAVIGATION ----- */
+header {
+  background-color: #002b45;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+select#language-select {
+  background-color: #ffffff;
+  color: #002b45;
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+}
+
+/* ----- MAIN CONTENT ----- */
+main {
+  padding: 40px 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+main h2 {
+  color: #002b45;
+  margin-top: 0;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  background-color: #002b45;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* =============================
+   CSS SPÉCIFIQUE À LA PAGE index.html
+============================= */
+#index-welcome {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* =============================
+   CSS SPÉCIFIQUE À LA PAGE projet.html
+============================= */
+#project-description {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* =============================
+   CSS SPÉCIFIQUE À LA PAGE partenaires.html
+============================= */
+#partners-section p {
+  font-style: italic;
+}
+
+/* =============================
+   CSS SPÉCIFIQUE À LA PAGE publications.html
+============================= */
+#publication-list li {
+  margin-bottom: 10px;
+}
+
+#publication-list a {
+  color: #006699;
+  text-decoration: underline;
+}
+
+/* =============================
+   CSS SPÉCIFIQUE À LA PAGE contact.html
+============================= */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #002b45;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #005f7f;
+}
+
+
+
+
+
+
+
+/* Sous-menu contact */
+.submenu {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+}
+
+.submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.submenu ul li {
+  margin: 0;
+}
+
+.submenu ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.submenu ul li a.active,
+.submenu ul li a:hover {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offres de poste - Projet MINERAL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Menu principal -->
+  <header>
+    <div class="container">
+      <h1>Projet MINERAL</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projet.html">Projet</a></li>
+          <li><a href="partenaires.html">Partenaires</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sous-menu contact -->
+  <nav class="submenu">
+    <ul>
+      <li><a href="contact.html">Nous contacter</a></li>
+      <li><a href="rejoindre.html">Nous rejoindre</a></li>
+      <li><a href="charte-graphique.html">Charte graphique et logo</a></li>
+      <li><a href="flux-rss.html">Flux RSS & Réseaux sociaux</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="offres de poste.html" class="active">Offres de poste</a></li> <!-- lien avec espaces -->
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Offres de poste</h2>
+
+    <section class="job-listing">
+      <article>
+        <h3>Ingénieur en traitement du langage naturel (NLP)</h3>
+        <p><strong>Description :</strong> Conception et développement de modèles pour l’analyse sémantique des conversations multimodales.</p>
+        <p><strong>Profil :</strong> Master ou doctorat en informatique, linguistique computationnelle ou domaine similaire.</p>
+        <p><strong>Durée :</strong> CDI ou contrat doctorat, à discuter.</p>
+      </article>
+
+      <article>
+        <h3>Assistant de recherche (stage ou CDD)</h3>
+        <p><strong>Description :</strong> Participation à la collecte et annotation de données, développement de scripts d’analyse.</p>
+        <p><strong>Profil :</strong> Étudiant en Master, passionné par l’intelligence artificielle et la linguistique.</p>
+        <p><strong>Durée :</strong> Stage de 3 à 6 mois.</p>
+      </article>
+    </section>
+
+    <section class="application-form">
+      <h3>Postuler</h3>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <label for="name">Nom complet :</label><br>
+        <input type="text" id="name" name="name" required /><br><br>
+
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email" required /><br><br>
+
+        <label for="position">Poste souhaité :</label><br>
+        <select id="position" name="position" required>
+          <option value="">-- Sélectionnez un poste --</option>
+          <option value="ingenieur-nlp">Ingénieur NLP</option>
+          <option value="assistant-recherche">Assistant de recherche</option>
+        </select><br><br>
+
+        <label for="cv">Télécharger votre CV (PDF) :</label><br>
+        <input type="file" id="cv" name="cv" accept="application/pdf" required /><br><br>
+
+        <label for="message">Message / Lettre de motivation :</label><br>
+        <textarea id="message" name="message" rows="5" placeholder="Vos motivations..." required></textarea><br><br>
+
+        <button type="submit">Envoyer la candidature</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Projet MINERAL</p>
+  </footer>
+
+</body>
+</html>
