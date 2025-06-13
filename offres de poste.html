@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offres de poste - Projet MINERAL</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chargement du script JavaScript principal -->
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <!-- Menu principal -->
+  <header>
+    <div class="container">
+      <div class="header-layout">
+        <div class="logo-title">
+          <a href="index.html">
+            <img src="Image/Logo mineral.png" alt="Logo MINERAL" class="logo-mineral" />
+          </a>
+          <h1>Projet MINERAL</h1>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projet.html">Le Projet</a></li>
+            <li><a href="partenaires.html">Partenaires</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Sélecteur de langue -->
+            <li>
+              <select id="language-select" onchange="changeLanguage()">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sous-menu de la section contact avec focus sur "Offres de poste" -->
+  <nav class="submenu">
+    <ul>
+      <li><a href="contact.html">Nous contacter</a></li>
+      <li><a href="offre de poste.html" class="active">Offres de poste</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main class="container">
+    <h2>Offres de poste</h2>
+
+    <!-- Section française des offres -->
+    <section id="offre-fr">
+      <section class="job-offer">
+        <h3>Stage : Modélisation des actes de communication dans les documents audiovisuels</h3>
+
+        <!-- Description du contexte du stage -->
+        <h4>Contexte</h4>
+        <p>
+          La plupart des interactions humaines se déroulent par le biais de conversations orales. Ce mode d'interaction reste un défi pour les modèles de traitement du langage oral, notamment à cause de l'importance des informations non verbales comme les expressions faciales ou les gestes.
+        </p>
+
+        <!-- Objectifs pédagogiques et scientifiques du stage -->
+        <h4>Objectifs du stage</h4>
+        <p>
+          Le stage de 5 à 6 mois vise à étendre une ontologie d'annotation existante pour mieux capturer les informations multimodales dans des dialogues de films et séries. L'étudiant.e expérimentera ensuite des modèles de langage à grande échelle (comme GPT-4V) pour automatiser l'annotation.
+        </p>
+
+        <!-- Informations pratiques pour les candidats -->
+        <h4>Conditions pratiques</h4>
+        <ul>
+          <li>Durée : 5 à 6 mois</li>
+          <li>Financement : environ 600 euros par mois</li>
+          <li>Lieu : LISN, équipe LIPS</li>
+          <li>Possibilité de poursuivre en doctorat selon résultats et intérêt</li>
+        </ul>
+
+        <!-- Profil recherché pour postuler -->
+        <h4>Qualifications requises</h4>
+        <ul>
+          <li>Master 2 en informatique ou domaine connexe</li>
+          <li>Expérience avec des frameworks d’apprentissage profond comme Keras ou PyTorch</li>
+          <li>Connaissance du traitement d’images est un plus</li>
+        </ul>
+      </section>
+
+      <!-- Formulaire de candidature pour la version française -->
+      <section class="application-form">
+        <h3>Postuler</h3>
+        <form action="mailto:guinaudeau@lisn.fr" method="post" enctype="text/plain">
+          <label for="name-fr">Nom complet :</label><br />
+          <input type="text" id="name-fr" name="Nom complet" required /><br /><br />
+
+          <label for="email-fr">Email :</label><br />
+          <input type="email" id="email-fr" name="Email" required /><br /><br />
+
+          <label for="message-fr">Message / Lettre de motivation :</label><br />
+          <textarea id="message-fr" name="Message" rows="5" placeholder="Vos motivations..." required></textarea><br /><br />
+
+          <button type="submit">Envoyer la candidature</button>
+        </form>
+      </section>
+    </section>
+
+    <!-- Section anglaise des offres, cachée par défaut -->
+    <section id="offre-en" style="display:none;">
+      <section class="job-offer">
+        <h3>Internship: Communicative Acts Modeling in Audio-Visual Documents</h3>
+
+        <!-- Description of the internship context -->
+        <h4>Context</h4>
+        <p>
+          Most human interactions occur through spoken conversations. This interaction mode remains a challenge for spoken language processing models, notably because of the importance of non-verbal information such as facial expressions or gestures.
+        </p>
+
+        <!-- Objectives of the internship -->
+        <h4>Internship’s objectives</h4>
+        <p>
+          The 5- to 6-month internship aims to extend an existing annotation ontology to better capture multimodal information in film and series dialogues. The intern will then experiment with large language models (like GPT-4V) to automate the annotation.
+        </p>
+
+        <!-- Practical information for candidates -->
+        <h4>Practical information</h4>
+        <ul>
+          <li>Duration: 5 to 6 months</li>
+          <li>Funding: approximately 600 euros per month</li>
+          <li>Location: LISN, LIPS team</li>
+          <li>Potential to continue with a PhD depending on results and interest</li>
+        </ul>
+
+        <!-- Qualifications required -->
+        <h4>Required qualifications</h4>
+        <ul>
+          <li>Master’s degree (M2) in Computer Science or related field</li>
+          <li>Experience with deep learning frameworks such as Keras or PyTorch</li>
+          <li>Knowledge of image processing is a plus</li>
+        </ul>
+      </section>
+
+      <!-- Application form in English -->
+      <section class="application-form">
+        <h3>Apply</h3>
+        <form action="mailto:guinaudeau@lisn.fr" method="post" enctype="text/plain">
+          <label for="name-en">Full Name:</label><br />
+          <input type="text" id="name-en" name="Full Name" required /><br /><br />
+
+          <label for="email-en">Email:</label><br />
+          <input type="email" id="email-en" name="Email" required /><br /><br />
+
+          <label for="message-en">Message / Motivation Letter:</label><br />
+          <textarea id="message-en" name="Message" rows="5" placeholder="Your motivation..." required></textarea><br /><br />
+
+          <button type="submit">Send Application</button>
+        </form>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- Pied de page avec logos des partenaires -->
+  <footer>
+    <div class="logos">
+      <a href="https://anr.fr/" target="_blank">
+        <img src="Image/logo-anr.gif" alt="Logo ANR" />
+      </a>
+      <a href="https://www.lisn.upsaclay.fr/" target="_blank">
+        <img src="Image/LISN-LOGO-PNG.png" alt="Logo LISN" />
+      </a>
+      <a href="https://www.lis-lab.fr/" target="_blank">
+        <img src="Image/logo-lis-2024.svg" alt="Logo LIS" />
+      </a>
+      <a href="https://www.orange.com/fr" target="_blank">
+        <img src="Image/Orange-SA-logo.png" alt="Logo Orange" />
+      </a>
+    </div>
+    <p>&copy; 2025 Projet MINERAL</p>
+  </footer>
+
+</body>
+</html>
