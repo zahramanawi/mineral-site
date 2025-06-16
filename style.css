@@ -409,3 +409,42 @@ footer .logos img {
 
 
 
+/* Appliquer navigation verticale quand largeur <= 768px (portrait smartphone/tablette) 
+   OU quand hauteur <= 480px (paysage smartphone) */
+@media (max-width: 768px), (max-height: 480px) {
+
+
+
+
+  /* Footer : padding réduit */
+  footer {
+    padding: 10px 5px;
+  }
+
+  /* Taille du logo minéral plus petite */
+  .logo-mineral {
+    height: 60px;
+  }
+
+  /* Texte général plus lisible sur petits écrans */
+  body {
+    font-size: 16px;
+  }
+
+  /* Ajuste la largeur des inputs du formulaire */
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    font-size: 16px;
+  }
+
+  /* Pour éviter que les éléments en flex cassent la mise en page */
+  .pub-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pub-icons {
+    margin-top: 10px;
+  }
+}
