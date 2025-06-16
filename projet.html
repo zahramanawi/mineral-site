@@ -1,40 +1,146 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>MINERAL - Le Projet</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Lien vers la feuille de style principale -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Lien vers le fichier JavaScript général, chargé après l'affichage -->
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- En-tête du site contenant le logo, le titre et la navigation -->
   <header>
     <div class="container">
-      <h1>Projet MINERAL</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="projet.html">Le Projet</a></li>
-          <li><a href="partenaires.html">Partenaires</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <select id="language-select" onchange="changeLanguage()">
-              <option value="fr">FR</option>
-              <option value="en">EN</option>
-            </select>
-          </li>
-        </ul>
-      </nav>
+      <div class="header-layout">
+        <div class="logo-title">
+          <!-- Logo du projet qui redirige vers la page d'accueil -->
+          <a href="index.html">
+            <img src="Image/Logo mineral.png" alt="Logo MINERAL" class="logo-mineral">
+          </a>
+          <!-- Titre du projet -->
+          <h1>Projet MINERAL</h1>
+        </div>
+        <!-- Menu de navigation principal du site -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projet.html">Le Projet</a></li>
+            <li><a href="partenaires.html">Partenaires</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <!-- Sélecteur de langue pour basculer entre le français et l'anglais -->
+            <li>
+              <select id="language-select" onchange="changeLanguage()">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
+  <!-- Contenu principal de la page -->
   <main class="container">
+    <!-- Titre de la section principale -->
     <h2>Description du Projet</h2>
-    <p>Le projet MINERAL explore les actes de communication, la structure discursive et la génération de scripts conversationnels.</p>
+
+    <!-- Contenu du projet en français -->
+    <div id="project-fr" class="lang-content">
+      <!-- Sous-titre du projet en français -->
+      <h3>Projet MINERAL : Représentation multi dimensionnelle pour la modélisation des conversations</h3>
+      <!-- Paragraphe introductif sur les objectifs généraux du projet -->
+      <p>
+        Le traitement automatique des conversations humaines pose d'importants défis en raison de leur nature multimodale et dynamique.
+        Le projet MINERAL vise à améliorer la compréhension des situations conversationnelles en abordant des problématiques clés :
+        exploiter les indices non verbaux, intégrer l'ancrage sémantique et comprendre la structure discursive dynamique.
+        Situé à l'intersection des modalités textuelles, audio et visuelles, le projet MINERAL s'appuie sur des travaux sur la compréhension de conversations
+        tout en se concentrant sur le domaine largement inexploré de l'analyse conversationnelle multimodale.
+      </p>
+      <!-- Paragraphe expliquant le premier objectif du projet -->
+      <p>
+        En exploitant des ensembles de données incluant des données télévisuelles et des réunions multipartites,
+        le premier objectif du projet MINERAL consiste à développer des modèles capables d'effectuer des analyses contextuelles multimodales sémantiques,
+        discursives et pragmatiques des conversations humaines à plusieurs participants.
+        Pour aborder la conversation dans sa globalité, nous commencerons par caractériser les actes de communication,
+        c'est-à-dire les plus petites unités de communication au sein de la conversation, qui peuvent être verbales ou non verbales,
+        puis étudier la structure communicative, à savoir les relations entre les actes de communication.
+      </p>
+      <!-- Paragraphe expliquant le deuxième objectif : génération automatique de scripts -->
+      <p>
+        Pour évaluer l'efficacité de ces modèles, le deuxième objectif du projet consistera à générer automatiquement un script
+        (sur le modèle de script de film) décrivant le contenu d'une conversation en tenant compte des dimensions sémantiques, discursives et pragmatiques.
+      </p>
+      <!-- Paragraphe sur les cas d'application industriels et scientifiques -->
+      <p>
+        Nous prévoyons d'évaluer la capacité de généralisation de nos modèles dans différents cas d'utilisation,
+        qu'ils soient industriels (résumé de réunion) ou académiques, grâce à la recherche sur le développement socio-cognitif des enfants.
+      </p>
+      <!-- Mention du financement ANR -->
+      <p><strong>Ce projet a été financé par l'Agence Nationale de la Recherche (ANR-24-CE23-4826)</strong></p>
+    </div>
+
+    <!-- Contenu équivalent en anglais (masqué par défaut via style display: none) -->
+    <div id="project-en" class="lang-content" style="display: none;">
+      <!-- Titre du projet en anglais -->
+      <h3>MINERAL Project: Multidimensional representation for conversation modeling</h3>
+      <!-- Introduction du projet en anglais -->
+      <p>
+        The MINERAL project aims to enhance the understanding of conversational situations by addressing key issues:
+        leveraging non-verbal cues, integrating semantic grounding, and understanding dynamic discourse structure.
+        Positioned at the intersection of textual, audio, and visual modalities,
+        the MINERAL project builds on work in conversation understanding while focusing on the largely unexplored domain of multimodal conversational analysis.
+      </p>
+      <!-- Premier objectif du projet en anglais -->
+      <p>
+        By leveraging datasets including television broadcasts and multi-party meetings,
+        the first objective of the MINERAL project is to develop models capable of performing semantic, discourse, and pragmatic contextual multimodal analysis
+        of multi-party human conversations. To address conversation as a whole, we will begin by characterizing communication acts—
+        the smallest units of communication within a conversation, which may be verbal or non-verbal—then study the communicative structure,
+        i.e., the relationships between these acts.
+      </p>
+      <!-- Deuxième objectif : génération de scripts en anglais -->
+      <p>
+        To assess the effectiveness of these models, the second objective of the project is to automatically generate a script
+        (in the style of a movie script) describing the content of a conversation, taking into account semantic, discourse, and pragmatic dimensions.
+      </p>
+      <!-- Cas d'application du projet en anglais -->
+      <p>
+        We plan to evaluate the generalization capability of our models across various use cases,
+        whether industrial (e.g., meeting summarization) or academic, through research on children's socio-cognitive development.
+      </p>
+      <!-- Mention du financement en anglais -->
+      <p><strong>This project is funded by the French National Research Agency (ANR-24-CE23-4826).</strong></p>
+    </div>
   </main>
 
+  <!-- Pied de page contenant les logos des partenaires et le droit d'auteur -->
   <footer>
+    <div class="logos">
+      <!-- Logo de l'ANR avec lien vers leur site -->
+      <a href=" https://anr.fr/" target="_blank">
+        <img src="Image/logo-anr.gif" alt="Logo ANR" />
+      </a>
+      <!-- Logo de LISN -->
+      <a href=" https://www.lisn.upsaclay.fr/" target="_blank">
+        <img src="Image/LISN-LOGO-PNG.png" alt="Logo LISN" />
+      </a>
+      <!-- Logo de LIS -->
+      <a href=" https://www.lis-lab.fr/" target="_blank">
+        <img src="Image/logo-lis-2024.svg" alt="Logo LIS" />
+      </a>
+      <!-- Logo de Orange -->
+      <a href=" https://www.orange.com/fr" target="_blank">
+        <img src="Image/Orange-SA-logo.png" alt="Logo Orange" />
+      </a>
+    </div>
+    <!-- Mention de copyright -->
     <p>&copy; 2025 Projet MINERAL</p>
   </footer>
+  
 </body>
 </html>
