@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MINERAL - Publications</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="publications.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <div class="header-layout">
+        <div class="logo-title">
+          <a href="index.html">
+            <img src="Image/Logo mineral.png" alt="Logo MINERAL" class="logo-mineral">
+          </a>
+          <h1>Projet MINERAL</h1>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projet.html">Le Projet</a></li>
+            <li><a href="partenaires.html">Partenaires</a></li>
+            <li><a href="publications.html" class="active">Publications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <!-- Sélecteur de langue -->
+              <select id="language-select" onchange="changeLanguage()">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
+    <h2>Publications</h2>
+
+    <!-- Onglets Publications / Jeux de données -->
+    <div class="tabs">
+      <button class="tab-button active">Publications</button>
+      <button class="tab-button">Jeux de données</button>
+    </div>
+
+    <!-- === Contenu de l'onglet Publications === -->
+    <div id="pub" class="tab-content active">
+
+      <!-- Bloc Français -->
+      <div id="publications-fr">
+        <div class="publication">
+          <p>à venir...</p>
+          <div class="pub-icons">
+            <a href="docs/exemple.pdf" target="_blank" title="Télécharger le PDF">
+              <img src="Image/pdf.png" alt="PDF" width="24">
+            </a>
+            <a href="BibTex.html" target="_blank" title="Voir BibTeX">
+              <img src="Image/bibtext.png" alt="BibTeX" width="24">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloc Anglais (masqué par défaut) -->
+      <div id="publications-en" style="display: none;">
+        <div class="publication">
+          <p>Coming soon...</p>
+          <div class="pub-icons">
+            <a href="docs/exemple.pdf" target="_blank" title="Download PDF">
+              <img src="Image/pdf.png" alt="PDF" width="24">
+            </a>
+            <a href="BibTex.html" target="_blank" title="View BibTeX">
+              <img src="Image/bibtext.png" alt="BibTeX" width="24">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- === Contenu de l'onglet Jeux de données === -->
+    <div id="data" class="tab-content">
+      <!-- Contenu français -->
+      <p id="data-fr">Aucun jeu de données disponible pour le moment.</p>
+      <!-- Contenu anglais (masqué) -->
+      <p id="data-en" style="display: none;">No datasets available at the moment.</p>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="logos">
+      <a href="https://anr.fr/" target="_blank">
+        <img src="Image/logo-anr.gif" alt="Logo ANR" />
+      </a>
+      <a href="https://www.lisn.upsaclay.fr/" target="_blank">
+        <img src="Image/LISN-LOGO-PNG.png" alt="Logo LISN" />
+      </a>
+      <a href="https://www.lis-lab.fr/" target="_blank">
+        <img src="Image/logo-lis-2024.svg" alt="Logo LIS" />
+      </a>
+      <a href="https://www.orange.com/fr" target="_blank">
+        <img src="Image/Orange-SA-logo.png" alt="Logo Orange" />
+      </a>
+    </div>
+    <p>&copy; 2025 Projet MINERAL</p>
+  </footer>
+
+  <!-- ===== JS pour les onglets (publications / jeux de données) ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      tabButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+
+          button.classList.add('active');
+          tabContents[index].classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

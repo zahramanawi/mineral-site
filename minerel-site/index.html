@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MINERAL - Accueil</title>
+  <!-- Lien vers la feuille de style CSS externe -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Lien vers le fichier JavaScript externe, chargé de façon différée -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- En-tête de la page -->
+  <header>
+    <div class="container">
+      <div class="header-layout">
+        <div class="logo-title">
+          <!-- Logo et titre du projet, cliquable pour revenir à l'accueil -->
+          <a href="index.html">
+            <img src="Image/Logo mineral.png" alt="Logo MINERAL" class="logo-mineral">
+          </a>
+          <h1>Projet MINERAL</h1>
+        </div>
+        <!-- Menu de navigation principal -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projet.html">Le Projet</a></li>
+            <li><a href="partenaires.html">Partenaires</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <!-- Sélecteur de langue -->
+            <li>
+              <select id="language-select" onchange="changeLanguage()">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Widget de recherche dans la FAQ -->
+      <li id="faq-container">
+        <div id="faq-widget">
+          <!-- Champ de recherche -->
+          <input type="text" id="searchInput" placeholder="Rechercher FAQ..." onkeyup="searchFAQ()" autocomplete="off" />
+          <div id="faq-list">
+            <!-- FAQ en français -->
+            <div class="faq-lang" id="faq-fr">
+              <!-- Chaque question peut être cliquée pour afficher la réponse -->
+              <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Qu’est-ce que le projet MINERAL ?</div>
+                <div class="faq-answer">Le projet MINERAL étudie les conversations humaines en intégrant les dimensions sémantiques, discursives et non verbales.</div>
+              </div>
+              <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Comment puis-je postuler à une offre ?</div>
+                <div class="faq-answer">Vous pouvez consulter les <a href="offres de poste.html">offres disponibles</a> et envoyer votre candidature via le formulaire dédié.</div>
+              </div>
+              <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Où puis-je trouver les publications ?</div>
+                <div class="faq-answer">Les publications sont accessibles dans la section <a href="publications.html">Publications</a>.</div>
+              </div>
+              <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quels sont les partenaires du projet ?</div>
+                <div class="faq-answer">Vous pouvez retrouver la liste complète des partenaires sur la page <a href="partenaires.html">Partenaires</a>.</div>
+              </div>
+            </div>
+
+            <!-- FAQ en anglais (masquée par défaut) -->
+            <div class="faq-lang" id="faq-en" style="display: none;">
+              <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">What is the MINERAL project?</div>
+                <div class="faq-answer">The MINERAL project studies human conversations by integrating semantic, discursive, and non-verbal dimensions.</div>
+              </div>
+              <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">How can I apply for a position?</div>
+                <div class="faq-answer">You can consult the <a href="offres de poste.html">available positions</a> and send your application via the dedicated form.</div>
+              </div>
+              <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Where can I find the publications?</div>
+                <div class="faq-answer">The publications are accessible in the <a href="publications.html">Publications</a> section.</div>
+              </div>
+              <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Who are the project partners?</div>
+                <div class="faq-answer">You can find the full list of partners on the <a href="partenaires.html">Partners</a> page.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+  </header>
+
+  <!-- Contenu principal de la page -->
+  <main class="container">
+    <!-- Bloc d'accueil en français -->
+    <div id="home-fr">
+      <h2 id="welcome-fr">Bienvenue sur le site du projet MINERAL</h2>
+      <p id="description-fr">Ce projet vise à améliorer la compréhension des conversations humaines...</p>
+      <section id="news-fr">
+        <h3>Actualités</h3>
+        <ul>
+          <li><strong>14/03/2025 :</strong> Lydia Belhoul débute son stage sur la modélisation multimodale des conversations au LISN</li>
+          <li><strong>18/01/2025 :</strong> Réunion de lancement du projet ANR MINERAL au LISN</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Bloc d'accueil en anglais (masqué par défaut) -->
+    <div id="home-en" style="display: none;">
+      <h2 id="welcome-en">Welcome to the MINERAL project website</h2>
+      <p id="description-en">This project aims to improve the understanding of human conversations...</p>
+      <section id="news-en">
+        <h3>News</h3>
+        <ul>
+          <li><strong>03/14/2025:</strong> Lydia Belhoul starts her internship on multimodal modeling of conversations at LISN</li>
+          <li><strong>01/18/2025:</strong> Kick-off meeting of the ANR MINERAL project at LISN</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- Pied de page avec logos des partenaires et mention de droits d’auteur -->
+  <footer>
+    <div class="logos">
+      <a href=" https://anr.fr/" target="_blank">
+        <img src="Image/logo-anr.gif" alt="Logo ANR" />
+      </a>
+      <a href=" https://www.lisn.upsaclay.fr/" target="_blank">
+        <img src="Image/LISN-LOGO-PNG.png" alt="Logo LISN" />
+      </a>
+      <a href=" https://www.lis-lab.fr/" target="_blank">
+        <img src="Image/logo-lis-2024.svg" alt="Logo LIS" />
+      </a>
+      <a href=" https://www.orange.com/fr" target="_blank">
+        <img src="Image/Orange-SA-logo.png" alt="Logo Orange" />
+      </a>
+    </div>
+    <p>&copy; 2025 Projet MINERAL</p>
+  </footer>
+
+  <!-- Script JavaScript intégré pour recherche et affichage des FAQ -->
+  <script>
+    // Fonction de recherche dans la FAQ
+    function searchFAQ() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const faqList = document.getElementById("faq-list");
+      const items = faqList.querySelectorAll(".faq-item");
+
+      if (input.trim() === "") {
+        faqList.style.display = "none";
+        items.forEach(item => item.style.display = "none");
+        return;
+      }
+
+      let hasVisible = false;
+      items.forEach(item => {
+        const question = item.querySelector(".faq-question").textContent.toLowerCase();
+        if (question.includes(input)) {
+          item.style.display = "block";
+          hasVisible = true;
+        } else {
+          item.style.display = "none";
+          item.querySelector(".faq-answer").style.display = "none";
+        }
+      });
+
+      faqList.style.display = hasVisible ? "block" : "none";
+    }
+
+    // Fonction pour afficher/masquer une réponse à une question FAQ
+    function toggleAnswer(item) {
+      const answer = item.querySelector(".faq-answer");
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    }
+  </script>
+  
+</body>
+</html>

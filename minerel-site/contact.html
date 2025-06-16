@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact - Projet MINERAL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Menu principal -->
+  <header>
+    <div class="container">
+      <div class="header-layout">
+        <div class="logo-title">
+          <a href="index.html">
+            <img src="Image/Logo mineral.png" alt="Logo MINERAL" class="logo-mineral" />
+          </a>
+          <h1>Projet MINERAL</h1>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projet.html">Le Projet</a></li>
+            <li><a href="partenaires.html">Partenaires</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <!-- Sélecteur de langue -->
+            <li>
+              <select id="language-select" onchange="changeLanguage()">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sous-menu spécifique à la page Contact -->
+  <nav class="submenu">
+    <ul>
+      <li><a href="contact.html" class="active">Nous contacter</a></li>
+      <li><a href="offres de poste.html">Offres de poste</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenu principal de la page Contact -->
+  <main class="container">
+  <!-- Version française du formulaire de contact -->
+  <div id="contact-fr">
+    <h2>Nous contacter</h2>
+    <!-- Adresse physique -->
+    <p><strong>Adresse :</strong><br />
+      Bâtiment 507<br />
+      Université Paris-Saclay, 91400 Orsay, France
+    </p>
+
+    <!-- Adresse email affichée en texte -->
+    <p><strong>Email :</strong> 
+      <a href="#" id="email-link-fr">guinaudeau [at] lisn [dot] fr</a>
+    </p>
+
+    <!-- Formulaire de contact français -->
+    <h3>Formulaire de contact</h3>
+    <form id="contact-form-fr" method="POST" action="mailto:guinaudeau@lisn.fr" enctype="text/plain">
+      <label for="subject-fr">Sujet :</label><br />
+      <input type="text" id="subject-fr" name="subject" required /><br /><br />
+
+      <label for="email-fr">Votre adresse mail :</label><br />
+      <input type="email" id="email-fr" name="email" required /><br /><br />
+
+      <label for="message-fr">Message :</label><br />
+      <textarea id="message-fr" name="message" rows="6" required></textarea><br /><br />
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <!-- Version anglaise du formulaire de contact, cachée par défaut -->
+  <div id="contact-en" style="display:none;">
+    <h2>Contact Us</h2>
+    <!-- Adresse physique en anglais -->
+    <p><strong>Address:</strong><br />
+      Building 507<br />
+      Université Paris-Saclay, 91400 Orsay, France
+    </p>
+
+    <!-- Adresse email affichée en texte -->
+    <p><strong>Email:</strong> 
+      <a href="#" id="email-link-en">guinaudeau [at] lisn [dot] fr</a>
+    </p>
+
+    <!-- Formulaire de contact anglais -->
+    <h3>Contact Form</h3>
+    <form id="contact-form-en" method="POST" action="mailto:guinaudeau@lisn.fr" enctype="text/plain">
+      <label for="subject-en">Subject:</label><br />
+      <input type="text" id="subject-en" name="subject" required /><br /><br />
+
+      <label for="email-en">Your email address:</label><br />
+      <input type="email" id="email-en" name="email" required /><br /><br />
+
+      <label for="message-en">Message:</label><br />
+      <textarea id="message-en" name="message" rows="6" required></textarea><br /><br />
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</main>
+
+  <!-- Pied de page avec logos partenaires -->
+  <footer>
+    <div class="logos">
+	<a href=" https://anr.fr/" target="_blank">
+      <img src="Image/logo-anr.gif" alt="Logo ANR" />
+	  </a>
+	  
+	  <a href=" https://www.lisn.upsaclay.fr/" target="_blank">
+      <img src="Image/LISN-LOGO-PNG.png" alt="Logo LISN" />
+	  </a>
+	  
+	  <a href=" https://www.lis-lab.fr/" target="_blank">
+      <img src="Image/logo-lis-2024.svg" alt="Logo LIS" />
+	  </a>
+	  
+	  <a href=" https://www.orange.com/fr" target="_blank">
+      <img src="Image/Orange-SA-logo.png" alt="Logo Orange" />
+	  </a>
+    </div>
+    <p>&copy; 2025 Projet MINERAL</p>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+
+  <!-- Script pour gérer le clic sur les liens email affichés en texte -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const emailFr = document.getElementById('email-link-fr');
+    const emailEn = document.getElementById('email-link-en');
+
+    if (emailFr) {
+      emailFr.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'mailto:guinaudeau@lisn.fr';
+      });
+    }
+
+    if (emailEn) {
+      emailEn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'mailto:guinaudeau@lisn.fr';
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
