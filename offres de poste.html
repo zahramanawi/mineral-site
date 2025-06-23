@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offres de poste - Projet MINERAL</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <!-- Menu principal -->
+  <header>
+    <div class="container">
+      <div class="header-layout">
+        <div class="logo-title">
+          <a href="index.html">
+            <img src="Image/Logo mineral.png" alt="Logo MINERAL" class="logo-mineral" />
+          </a>
+          <h1>Projet MINERAL</h1>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projet.html">Le Projet</a></li>
+            <li><a href="partenaires.html">Partenaires</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="offres de poste.html">Offres de poste</a></li>
+            <li>
+              <select id="language-select" onchange="changeLanguage()">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main class="container">
+  <h2 id="titre-page">Offres de poste</h2>
+
+  <!-- SECTION FRANÇAISE -->
+  <section id="offre-fr">
+    <h3>Liste des offres de poste</h3>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Titre du poste</th>
+          <th>Durée</th>
+          <th>Lieu</th>
+          <th>Financement</th>
+          <th>Profil recherché</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Stage : Modélisation des actes de communication dans les documents audiovisuels</td>
+          <td>5 à 6 mois</td>
+          <td>LISN, équipe LIPS</td>
+          <td>≈ 600€/mois</td>
+          <td>Master 2 en informatique, Deep Learning, traitement d’images (optionnel)</td>
+        </tr>
+        <tr>
+          <td colspan="5" style="text-align: center; font-style: italic;">Prochaine offre à venir...</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SECTION ANGLAISE (cachée par défaut) -->
+  <section id="offre-en" style="display: none;">
+    <h3>Job Opportunities</h3>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Position Title</th>
+          <th>Duration</th>
+          <th>Location</th>
+          <th>Funding</th>
+          <th>Required Profile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Internship: Communicative Acts Modeling in Audiovisual Documents</td>
+          <td>5 to 6 months</td>
+          <td>LISN, LIPS team</td>
+          <td>≈ €600/month</td>
+          <td>Master’s in Computer Science, Deep Learning, Image Processing (optional)</td>
+        </tr>
+        <tr>
+          <td colspan="5" style="text-align: center; font-style: italic;">Next offer coming soon...</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- FORMULAIRE UNIQUE POUR LES DEUX LANGUES -->
+  <section class="application-form">
+    <h3 id="form-title">Postuler à une offre</h3>
+    <form action="mailto:guinaudeau@lisn.fr" method="post" enctype="text/plain">
+      <label for="offre">Choisissez l'offre :</label><br />
+      <select id="offre" name="Offre">
+        <option value="Modélisation des actes de communication">Stage : Modélisation des actes de communication</option>
+        <option value="Other">Other (coming soon)</option>
+      </select><br /><br />
+
+      <label for="name">Nom complet / Full Name:</label><br />
+      <input type="text" id="name" name="Nom complet" required /><br /><br />
+
+      <label for="email">Email :</label><br />
+      <input type="email" id="email" name="Email" required /><br /><br />
+
+      <label for="message">Message / Motivation Letter:</label><br />
+      <textarea id="message" name="Message" rows="5" placeholder="Vos motivations / Your motivation..." required></textarea><br /><br />
+
+      <button type="submit">Envoyer la candidature / Send Application</button>
+    </form>
+  </section>
+</main>
+
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="logos">
+      <a href="https://anr.fr/" target="_blank">
+        <img src="Image/logo-anr.gif" alt="Logo ANR" />
+      </a>
+      <a href="https://www.lisn.upsaclay.fr/" target="_blank">
+        <img src="Image/LISN-LOGO-PNG.png" alt="Logo LISN" />
+      </a>
+      <a href="https://www.lis-lab.fr/" target="_blank">
+        <img src="Image/logo-lis-2024.svg" alt="Logo LIS" />
+      </a>
+      <a href="https://www.orange.com/fr" target="_blank">
+        <img src="Image/Orange-SA-logo.png" alt="Logo Orange" />
+      </a>
+    </div>
+    <p>&copy; 2025 Projet MINERAL</p>
+  </footer>
+
+</body>
+</html>
